@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(241, 194, 255);
+    }
+
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    @keyframes rotateAnimation {
+        0% {
+            transform: rotate(0deg);
+            left: -50px;
+        }
+        25% {
+            left: calc(100vw+50px);
+        }
+        50% {
+            left: -50px;
+        }
+        75% {
+            left: calc(100vw+50px);
+        }
+        100% {
+            transform: rotate(360deg);
+            left: -50px;
+        }
+    }
+
+    .rotate-animation {
+        animation: rotateAnimation 3s linear infinite;
+    }
+    
+    .rotate-animation:hover {
+        animation-play-state: paused;
+        background-color: red;
+    }
+    
+    .move-animation {
+        animation: moveAnimation 30s linear infinite alternate;
+    }
+    @keyframes moveAnimation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    19% {
+        transform: translate(calc(100vw + 200px), 0px);
+    }
+    20% {
+        transform: translate(calc(100vw + 200px), var(--grid-height));
+    }
+    39% {
+        transform: translate(-200px, var(--grid-height));
+    }
+    40% {
+        transform: translate(-200px, calc(var(--grid-height) * 2));
+    }
+    59% {
+        transform: translate(calc(100vw + 200px), calc(var(--grid-height) * 2));
+    }
+    60% {
+        transform: translate(calc(100vw + 200px), calc(var(--grid-height) * 3));
+    }
+    79% {
+        transform: translate(-200px, calc(var(--grid-height) * 3));
+    }
+    80% {
+        transform: translate(-200px, calc(var(--grid-height) * 4));
+    }
+    99% {
+        transform: translate(calc(100vw + 200px), calc(var(--grid-height) * 4));
+    }
+    100% {
+        transform: translate(calc(100vw + 200px), calc(var(--grid-height) * 5));
+    }    
+}
+    
+
+
+
+    .top {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+    }
+    
+
+    .top a:hover {
+        background-color: yellow;
+    }
+    
+    .down a:hover {
+        background-color: yellow;
+    }
+    
+    .down {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        bottom: 1vh;
+    }
+
+
+    footer {
+        position: fixed;
+        left: 1rem;
+        bottom: 1rem;
+        color: rgb(218, 0, 0);
+    }
+    
+    footer a {
+        color: rgb(218, 0, 0);
+    }
+
+    div {
+        width: 90px;
+        height: 90px;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.5;
+        word-break: keep-all;
+        padding-top: 1vh;
+        margin-left: 15%;
+    }
+
+    h3 {
+        padding: 0;
+        margin-top: 0;
+        font-size: 30px;
+        margin-left: 30px;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-left: 30px;
+        text-decoration: underline;
+    }
+
+@media screen and (min-width: 900px) {
+    .side {
+        font-size: 30px;
+        position: fixed;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        padding: 1rem;
+    }
+    .document {
+        padding-top: 1vh;
+        font-size: 30px;
+    } 
+
+    p {
+        column-count: auto;
+        column-width: 30rem;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        top: 3vh;
+        margin-left: 0;
+    }
+    .side {
+        float: left;
+        font-size: 30px;
+        position: relative;
+        left: 0;
+        width: 20%;
+        margin: 1rem;
+    }
+
+    .document {
+        margin-top: 16px;
+        font-size: 30px;
+        margin-left: 1rem;
+    }
+
+    h3 {
+        padding: 0;
+        margin-top: 0;
+        font-size: 30px;
+    }
+    button {
+        visibility: hidden;
+        display: none;
+    }   
+}
+
+
+
+
+.side a {
+    display: block;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 30px;
+    margin-top: 0;
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+button {
+    font-size: 30px;
+    background-color: #00a70e;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 50px;
+    margin-top: 3vh;
+    margin-bottom: 0;
+}

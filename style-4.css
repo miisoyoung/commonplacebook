@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+    html {
+        scroll-behavior: smooth;
+        background-color: rgb(255, 255, 255);
+        background: conic-gradient(#ff3933, #23b223);
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .top {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+    }
+
+
+    .top a:hover {
+        background-color: yellow;
+    }
+    
+    .down a:hover {
+        background-color: yellow;
+    }
+
+    .down {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        bottom: 1vh;
+    }
+
+    .image {
+        z-index: 2;
+    }
+
+    .navigation {
+        font-size: large;
+        position: absolute;
+        text-align: center;
+        left: 25vw;
+        top: 45vh;
+        transition: all 0.1s ease-in;
+        z-index: 1;
+    }
+
+    .navigation a {
+        color:rgb(136, 255, 0);
+        mix-blend-mode: color-dodge;
+    }
+
+    .navigation a:hover {
+        color:#c8ff00;
+    }
+
+    .article {
+        top: 10vh;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.5;
+        word-break: keep-all;
+        padding-top: 1vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    aside {
+        position: fixed;
+        margin-top: 1vh;
+    }
+
+
+    article {
+        line-break: auto;
+        position: relative;
+        width: 50%;
+        margin-top: 10vh;
+        left: 50%;
+        padding-left: 1vw;
+    }
+
+    figcaption {
+        visibility: hidden;
+    }
+
+    .image:hover, .image:hover figcaption {
+        visibility: visible;
+    }

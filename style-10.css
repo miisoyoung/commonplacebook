@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(214, 214, 214);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.top {
+    font-family: monospace;
+    text-align: center;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+.top a:hover {
+    background-color: yellow;
+}
+
+.down a:hover {
+    background-color: yellow;
+}
+
+.down {
+    font-family: monospace;
+    text-align: center;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    bottom: 1vh;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding-top: 1vh;
+}
+
+.top a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.down a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    padding-top: 2vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.cards {
+    font-size: 1.5rem;
+    height: 500px;
+    overflow: scroll;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: beige;
+    border-left: solid 1.5px cornflowerblue;
+    border-bottom: solid 1.5px cornflowerblue;
+}
+
+
+@media (max-width: 900px) {
+    #heading {
+        grid-column: 2 / span 4;
+    }
+    body {
+        background-color: rgb(0, 119, 255);
+    }    
+    .container {
+            grid-template-columns: repeat(4,1fr);
+        }
+    }

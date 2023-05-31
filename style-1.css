@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    }
+
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .top {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+    }
+    
+
+    .top a:hover {
+        background-color: yellow;
+    }
+    
+    .down a:hover {
+        background-color: yellow;
+    }
+    
+    .down {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        bottom: 1vh;
+    }
+
+@media screen and (min-width: 900px) {
+    .side {
+        position: fixed;
+        top: 3vh;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        padding: 1rem;
+    }
+}
+
+    .side a {
+    display: block;
+    text-decoration: none;
+}
+
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: keep-all;
+    padding-top: 1vh;
+    margin-left: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}

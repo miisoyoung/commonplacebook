@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+    html {
+        scroll-behavior: smooth;
+        background: lightgray;
+        padding-top: 1vh;
+        font-size: 1rem;
+        cursor: wait;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    
+    .top .down, a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    h1 {
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+    .top {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+    }
+    
+    .top a:hover {
+        background-color: yellow;
+    }
+    
+    .down a:hover {
+        background-color: yellow;
+    }
+    
+    .down {
+        font-family: monospace;
+        text-align: center;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        bottom: 1vh;
+    }
+    
+    p {
+        text-align: left;
+        word-break: keep-all;
+        font-size: 25px;
+        line-height: 1.5;;
+    }
+
+    .child {
+        text-align: center;
+        background-color: white;
+        border-radius: 50px;
+        border-color: red;
+        padding: 20px;
+        color: white;
+    }
+
+    .child:nth-child(1){
+        grid-area: header;
+    }
+
+    .child:nth-child(2){
+        grid-area: sidebar;
+    }
+
+    .child:nth-child(3){
+        grid-area: main;
+        height: 65vh;
+        line-break: loose;
+        overflow: scroll;
+    }
+
+    .child:nth-child(4){
+        grid-area: footer;
+    }
+
+    .parent {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        display: grid;
+        grid: "header header" "sidebar main" "footer footer"
+    }
+
+    .child a {
+        color: rgb(255, 255, 255);
+    }
+
+    .child:hover a {
+        color: rgb(0, 0, 0);
+        transition: .2s ease-in-out;
+    }
+
+    .child:hover {
+        color: black;
+        background-color: rgb(255, 240, 108);
+        transition: .2s ease-in-out;
+    }
+
